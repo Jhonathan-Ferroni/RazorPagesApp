@@ -7,6 +7,8 @@
 <html>
 <head>
     <title>@ViewData["Title"] - My Razor App</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"> <!--Esse comando append serve para que o cache seja atualizado quando houver atualização no css-->
+    <link rel="stylesheet" href="~/MyRazorApp.styles.css" asp-append-version="true">
 </head>
 <body>
 <header>
@@ -15,5 +17,11 @@
 <main>
     @RenderBody()
 </main>
+<footer>
+    2026 - Powered By Jona.f
+</footer>
+
+@RenderSection(name:"scripts", required:false)
+
 </body>
 </html>
